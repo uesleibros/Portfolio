@@ -2,7 +2,7 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import Header from "/components/Header.tsx";
 import "/styles/globals.css";
-import { inter, poppins } from "fonts";
+import { inter, poppins } from "/fonts";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
 	return (
