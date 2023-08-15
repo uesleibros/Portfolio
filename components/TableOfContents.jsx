@@ -16,6 +16,7 @@ export default function TableOfContents() {
   };
 
   function changeArrow() {
+    console.log(arrowDirection.type.name);
     if (arrowDirection.type.name == "ArrowOpen") {
       setArrowDirection(<ArrowClosed />);
     } else {
