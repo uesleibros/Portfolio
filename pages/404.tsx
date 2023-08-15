@@ -9,7 +9,7 @@ export default function Custom404() {
 
 	useEffect(() => {
 		const currentRoute = router.asPath;
-		window.document.getElementById("info").innerHTML = `Page <strong>${currentRoute}</strong> not exists.`;
+		document.getElementById("info").innerHTML = `Page <strong>${currentRoute}</strong> not exists.`;
 	}, []);
 
 	return (
