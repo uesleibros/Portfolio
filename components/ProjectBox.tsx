@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function ProjectBox({ title, description, authors, color, badge, url }) {
+export default function ProjectBox({ title: string, description: string, authors: string[], color: string, badge: string, url: string }) {
   const [showAuthors, setShowAuthors] = useState(false);
 
   const handleShowAuthors= () => {
