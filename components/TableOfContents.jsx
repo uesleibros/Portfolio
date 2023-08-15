@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import ArrowOpen from "../components/ArrowOpen";
-import ArrowClosed from "../components/ArrowClosed";
+import ArrowOpen from "./ArrowOpen";
+import ArrowClosed from "./ArrowClosed";
 
 export default function TableOfContents() {
   const [showTableOfContents, setShowTableOfContents] = useState(false);
