@@ -1,5 +1,5 @@
-import TableOfContents from "/components/TableOfContents";
-import ProjectBox from "/components/ProjectBox";
+import TableOfContents from "../components/TableOfContents";
+import ProjectBox from "../components/ProjectBox";
 
 export default function Home() {
 	const projects = [
