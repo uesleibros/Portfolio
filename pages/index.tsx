@@ -16,7 +16,7 @@ export default function Home() {
 		},
 	];
 	return (
-		<div className="relative flex flex-col justify-center items-center mx-4">
+		<div className="relative flex flex-col justify-center items-center p-4">
 			<h1 id="about" className="text-4xl font-semibold mb-10">About Me</h1>
 			<p className="text-gray-600 max-w-prose">
         		Hello! I'm Ueslei Paim, a passionate and experienced programmer with a keen interest in crafting elegant solutions to complex problems. With a solid foundation in computer science and a strong commitment to continuous learning, I thrive on creating efficient and effective software solutions.
