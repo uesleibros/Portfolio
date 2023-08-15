@@ -7,7 +7,7 @@ export default function TableOfContents() {
   const [showDetails, setShowDetails] = useState(true);
   const [arrowDirection, setArrowDirection] = useState(<ArrowOpen />);
 
-  const handleScroll = () => {
+  function handleScroll() {
     if (window.scrollY > 80) {
       setShowTableOfContents(true);
     } else {
@@ -15,7 +15,7 @@ export default function TableOfContents() {
     }
   };
 
-  const changeArrow = () => {
+  function changeArrow() {
     if (arrowDirection.type.name == "ArrowOpen") {
       setArrowDirection(<ArrowClosed />);
     } else {

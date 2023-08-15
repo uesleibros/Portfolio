@@ -10,7 +10,8 @@ yarn dev
 pnpm dev
 ```
 
-Or, build server:
+Build server:
+
 ```bash
 npm run build
 # or

@@ -3,11 +3,11 @@ import { useState } from "react";
 export default function ProjectBox({ title, description, authors, color, badge, url }) {
   const [showAuthors, setShowAuthors] = useState(false);
 
-  const handleShowAuthors= () => {
+  function handleShowAuthors () {
     setShowAuthors(true);
-  };
-
-  const handleHideAuthors= () => {
+  }
+  
+  function handleHideAuthors() {
     setShowAuthors(false);
   };
 
