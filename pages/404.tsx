@@ -14,7 +14,7 @@ export default function Custom404() {
 
 	return (
 		<div className="relative flex flex-col justify-center items-center">
-			<Image priority src={sadFace} className="select-none" />
+			<Image priority src={sadFace} alt="Error 404" className="select-none" />
 			<h1 className="text-8xl font-bold mt-5">404</h1>
 			<p id="info">
 				Page <strong>{currentRoute}</strong> not exists.
