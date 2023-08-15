@@ -2,7 +2,7 @@ import { poppins } from "../fonts";
 
 export default function Header() {
   return (
-    <header className="bg-gray-50 py-4 mb-20 w-full">
+    <header className="bg-gray-50 py-4 mb-20 mx-4 w-full">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className={`text-xl text-blue-500 select-none font-bold ${poppins.className}`}>Ueslei Paim</h1>
         <nav>
