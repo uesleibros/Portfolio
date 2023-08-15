@@ -8,6 +8,15 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<main className={`relative flex flex-col justify-center items-center mb-10 ${inter.className}`}>
 			<Head>
+				{/* Open Graph */}
+				<meta property="og:title" content="Ueslei Paim's Portfolio" />
+				<meta property="description" content="Welcome to my portfolio! I am a passionate and dedicated programmer with a strong background in web development. With expertise in front-end and back-end technologies, I have successfully delivered various projects that showcase my skills in creating responsive, user-friendly, and visually appealing websites and applications." />
+				<meta property="og:description" content="Welcome to my portfolio! I am a passionate and dedicated programmer with a strong background in web development. With expertise in front-end and back-end technologies, I have successfully delivered various projects that showcase my skills in creating responsive, user-friendly, and visually appealing websites and applications." />
+				{/* Twitter */}
+				<meta property="twitter:title" content="Ueslei Paim's Portfolio" />
+				<meta property="twitter:description" content="Welcome to my portfolio! I am a passionate and dedicated programmer with a strong background in web development. With expertise in front-end and back-end technologies, I have successfully delivered various projects that showcase my skills in creating responsive, user-friendly, and visually appealing websites and applications." />
+				<meta property="twitter:card" content="summary_large_image" />
+				<link rel="icon" href="../public/logo.jpg" />
 				<title>Ueslei Paim's Portfolio</title>
 			</Head>
 			<Header />
