@@ -1,10 +1,11 @@
+import NextPage from "next";
 import { useRouter } from "next/router";
 import { useEffect, useState  } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import sadFace from "../public/sad-face.svg";
 
-export default function Custom404() {
+export default function Custom404(): NextPage {
 	const router = useRouter();
 	const [currentRoute, setCurrentRoute] = useState("");
 

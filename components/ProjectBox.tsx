@@ -10,7 +10,7 @@ interface Props {
   url: string;
 }
 
-export default function ProjectBox(props): NextPage<Props> {
+export default function ProjectBox(props: Props): NextPage {
   const [showAuthors, setShowAuthors] = useState(false);
   const { name, description, authors, color, badge, url } = props;
 
