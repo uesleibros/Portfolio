@@ -5,9 +5,9 @@ interface Props {
   name: string;
   description: string;
   authors: string[];
-  color: string;
-  badge: string;
-  url: string;
+  color?: string;
+  badge?: string;
+  url?: string;
 }
 
 const ProjectBox: NextPage<Props> = (props) => {
