@@ -1,7 +1,18 @@
 import { useState } from "react";
+import NextPage from "next";
 
-export default function ProjectBox({ title, description, authors, color, badge, url }) {
+interface Props {
+  name: string;
+  description: string;
+  authors: string[];
+  color: string;
+  badge: string;
+  url: string;
+}
+
+export default function ProjectBox(props): NextPage<Props> {
   const [showAuthors, setShowAuthors] = useState(false);
+  const { name, description, authors, color, badge, url } = props;
 
   function handleShowAuthors () {
     setShowAuthors(true);
@@ -15,7 +26,7 @@ export default function ProjectBox({ title, description, authors, color, badge, 
     <div className="bg-white rounded-lg shadow-md p-4 border border-gray-200" style={{ minHeight: "180px" }} onMouseOver={handleShowAuthors} onMouseOut={handleHideAuthors}>
       <div className="flex items-center mb-2">
         <div className={`w-4 h-4 ${color ? color : "bg-gray-400"} rounded-full mr-2`}></div>
-        <h2 className="text-lg font-semibold">{title}</h2>
+        <h2 className="text-lg font-semibold">{name}</h2>
         {badge && (
           <span className={`inline-block ml-2 px-2 py-1 text-xs rounded select-none ${color ? color : "bg-gray-400"} text-white`}>{ badge }</span>
         )}

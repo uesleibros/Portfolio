@@ -1,20 +1,24 @@
-import TableOfContents from "../components/TableOfContents";
+import NextPage from "next";
 import ProjectBox from "../components/ProjectBox";
 
-export default function Home() {
+export default function Home(): NextPage {
 	const projects = [
-		{ title: "Better Array", color: "bg-pink-400", 
+		{ name: "Better Array", color: "bg-pink-400", 
 		  description: "BetterArray is a C++ library that provides a more convenient and efficient way to work with arrays.", 
 		  url: "https://github.com/uesleibros/BetterArray",
 		  authors: ["Me"] 
 		},
-		{ title: "Periodic Table JSON", color: "bg-blue-400", 
+		{ name: "Periodic Table JSON", color: "bg-blue-400", 
 		  description: "An JSON file of the Periodic Table.", 
 		  badge: "Contributor",
 		  url: "https://github.com/therealarfu/Periodic-Table-JSON",
 		  authors: ["Me", "TheRealArfu"] 
 		},
 	];
+
+	function Alertar(){
+		alert("oi");
+	}
 	return (
 		<div className="relative flex flex-col justify-center items-center p-4 sm:items-start gap-4">
 			<h1 id="about" className="text-4xl font-semibold mb-10">About Me</h1>
@@ -42,11 +46,12 @@ export default function Home() {
 
 			<h1 id="projects" className="text-4xl font-semibold mt-10 mb-10">Projects</h1>
 
-			<div className="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 sm:grid-cols-1 gap-4 justify-center items-center">
+			<div className="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 sm:grid-cols-1 gap-12 justify-center items-center">
 				{projects.map((project, index) => (
 					<ProjectBox
 						key={index}
-						title={project.title}
+						onClick={Alertar}
+						name={project.name}
 						color={project.color}
 						description={project.description}
 						badge={project.badge}
@@ -55,7 +60,6 @@ export default function Home() {
 		      	/>
 	      	))}
       	</div>
-			<TableOfContents />
 		</div>
 	);
 };
