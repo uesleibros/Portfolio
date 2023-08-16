@@ -1,4 +1,5 @@
 import { useState } from "react";
+import NextPage from "next";
 
 interface Props {
   name: string;
@@ -9,7 +10,7 @@ interface Props {
   url: string;
 }
 
-export default function ProjectBox({ props: Props }) {
+export default const ProjectBox: NextPage<Props> = ({ props }) {
   const [showAuthors, setShowAuthors] = useState(false);
   const { name, description, authors, color, badge, url } = props;
 
