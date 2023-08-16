@@ -1,5 +1,5 @@
 import { useState } from "react";
-import NextPage from "next";
+import { NextPage } from "next";
 
 interface Props {
   name: string;
