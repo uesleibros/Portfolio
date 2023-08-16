@@ -49,7 +49,6 @@ export default function Home() {
 				{projects.map((project, index) => (
 					<ProjectBox
 						key={index}
-						onClick={Alertar}
 						name={project.name}
 						color={project.color}
 						description={project.description}
