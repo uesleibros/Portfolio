@@ -1,7 +1,6 @@
-import NextPage from "next";
 import ProjectBox from "../components/ProjectBox";
 
-export default function Home(): NextPage {
+export default function Home() {
 	const projects = [
 		{ name: "Better Array", color: "bg-pink-400", 
 		  description: "BetterArray is a C++ library that provides a more convenient and efficient way to work with arrays.", 
