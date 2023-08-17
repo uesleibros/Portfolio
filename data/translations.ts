@@ -1,4 +1,4 @@
-{
+const Translations = {
 	"alts": {
 		"portuguese": {
 			"english": "Inglês",
@@ -123,4 +123,6 @@
 			"title": "Contacts"
 		}
 	}
-}
+};
+
+export default Translations;

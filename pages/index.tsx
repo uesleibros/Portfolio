@@ -5,7 +5,7 @@ import { Github, AtSign, Instagram, Linkedin } from "lucide-react";
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
 import ProjectBox from "@/components/ProjectBox";
 import Social from "@/components/Social";
-import Translations from "@/public/translations.json";
+import Translations from "@/data/translations";
 import JSLogo from "@/public/languages/js.png";
 import TSLogo from "@/public/languages/ts.png";
 import PythonLogo from "@/public/languages/python.png";

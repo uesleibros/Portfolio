@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { NextPage } from "next";
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
-import Translations from "@/public/translations.json";
+import Translations from "@/data/translations";
 
 interface Props {
   name: string;
