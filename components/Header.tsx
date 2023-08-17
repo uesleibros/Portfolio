@@ -6,7 +6,7 @@ import Translations from "@/public/translations.json";
 import Dropdown from "@/components/Dropdown";
 
 export default function Header() {
-  const { language, changeLanguage } = useLanguageSwitcher();
+  const { language, changeLanguage, updateLanguage } = useLanguageSwitcher();
 
   let aboutItems: List<{ label: string, link?: string, labelType?: string | null }> = [];
   let technologiesItems: List<{ label: string, link?: string, labelType?: string | null }> = [];
@@ -32,18 +32,15 @@ export default function Header() {
       ];
   }
 
-  function setupLanguage(): string {
-    let value: string;
-
-    if (!language) {
+  function setupLanguage() {
+    if (!localStorage.getItem("language")) {
       changeLanguage("language-Portuguese");
     }
-
-    return language;
   }
 
   useEffect(() => {
-    changeLanguage(language ? language : setupLanguage());
+    updateLanguage();
+    setupLanguage();
   }, []);
 
   return (

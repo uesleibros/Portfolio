@@ -17,7 +17,7 @@ import FlaskLogo from "@/public/frameworks/flask.png";
 import FastAPILogo from "@/public/frameworks/fastapi.png";
 
 export default function Home() {
-	const { language, changeLanguage } = useLanguageSwitcher();
+	const { language } = useLanguageSwitcher();
 
 	const projects = [
 		{ name: "Better Array", color: "bg-pink-400", 

@@ -63,7 +63,7 @@ const Dropdown: NextPage<Props> = (props) => {
               <a
                 key={index}
                 href={item.link}
-                onClick={item.labelType ? () => handleChangeLanguage(item.labelType) : handleChangeLanguage("")}
+                onClick={() => handleChangeLanguage(item.labelType ?? "")}
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 cursor-pointer"
                 role="menuitem"
               >
