@@ -12,7 +12,9 @@ const Social: NextPage<Props> = (props) => {
 	const { name, url, icon, tip } = props;
 	return (
 		<div className="flex flex-col items-center gap-3 text-1xl font-semibold">
-			<div title={ name }>{ icon }</div>
+			<div title={ name }>
+				{ icon }
+			</div>
 
 			<div className="flex flex-col items-center gap-1">
 				{url ? (
