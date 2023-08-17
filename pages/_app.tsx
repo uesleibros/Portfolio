@@ -12,15 +12,15 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 				<meta property="og:title" content="Ueslei Paim's Portfolio" />
 				<meta property="description" content="Welcome to my portfolio! I am a passionate and dedicated programmer with a strong background in web development. With expertise in front-end and back-end technologies, I have successfully delivered various projects that showcase my skills in creating responsive, user-friendly, and visually appealing websites and applications." />
 				<meta property="og:description" content="Welcome to my portfolio! I am a passionate and dedicated programmer with a strong background in web development. With expertise in front-end and back-end technologies, I have successfully delivered various projects that showcase my skills in creating responsive, user-friendly, and visually appealing websites and applications." />
-				<meta property="og:image" content="/logo.jpg" />
+				<meta property="og:image" content="logo.jpg" />
 				
 				{/* Twitter */}
 				<meta property="twitter:title" content="Ueslei Paim's Portfolio" />
 				<meta property="twitter:description" content="Welcome to my portfolio! I am a passionate and dedicated programmer with a strong background in web development. With expertise in front-end and back-end technologies, I have successfully delivered various projects that showcase my skills in creating responsive, user-friendly, and visually appealing websites and applications." />
 				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:image" content="/logo.jpg" />
+				<meta property="twitter:image" content="logo.jpg" />
 
-				<link rel="icon" href="../logo.jpg" sizes="any" />
+				<link rel="icon" href="logo.jpg" sizes="any" />
 				<title>Ueslei Paim's Portfolio</title>
 			</Head>
 			<Header />
