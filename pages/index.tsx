@@ -37,11 +37,11 @@ export default function Home() {
 	];
 
 	return (
-		<div className={`relative flex flex-col justify-center items-center p-4 gap-4 ${language ? "visible" : "hidden"}`}>
+		<div className={`relative flex flex-col justify-center items-center scroll-smooth p-4 gap-4 ${language ? "visible" : "hidden"}`}>
 
 			{/* About Me */}
 
-			<h1 id="about" className="text-4xl font-bold mb-10 w-[100vh] sm:w-full flex flex-col gap-6 text-center">
+			<h1 id="about" className="text-4xl font-bold mb-10 w-[100vh] sm:w-full flex flex-col gap-6 text-center scroll-smooth">
 				{language && Translations[language].about.title}
 				<hr className="w-full relative border border-gray-200" />
 			</h1>
@@ -50,7 +50,7 @@ export default function Home() {
         		{language && Translations[language].about.body}
 			</p>
 
-			<h3 id="technical-expertise" className="text-xl font-semibold mt-4 mb-4 w-[100vh] sm:w-full flex flex-col gap-6 text-left">
+			<h3 id="technical-expertise" className="text-xl font-semibold mt-4 mb-4 w-[100vh] sm:w-full flex flex-col gap-6 text-left scroll-smooth">
 				{language && Translations[language].about.s1.title}
 				<hr className="w-full relative border border-gray-200" />
 			</h3>
@@ -68,7 +68,7 @@ export default function Home() {
 				))}
 			</ul>
 
-			<h3 id="problem-solver" className="text-xl font-semibold mt-4 mb-4 w-[100vh] sm:w-full flex flex-col gap-6 text-left">
+			<h3 id="problem-solver" className="text-xl font-semibold mt-4 mb-4 w-[100vh] sm:w-full flex flex-col gap-6 text-left scroll-smooth">
 				{language && Translations[language].about.s2.title}
 				<hr className="w-full relative border border-gray-200" />
 			</h3>
@@ -77,7 +77,7 @@ export default function Home() {
 			  {language && Translations[language].about.s2.body.text}
 			</p>
 
-			<h3 id="lifelong-learner" className="text-xl font-semibold mt-4 mb-4 w-[100vh] sm:w-full flex flex-col gap-6 text-left">
+			<h3 id="lifelong-learner" className="text-xl font-semibold mt-4 mb-4 w-[100vh] sm:w-full flex flex-col gap-6 text-left scroll-smooth">
 				{language && Translations[language].about.s3.title}
 				<hr className="w-full relative border border-gray-200" />
 			</h3>
@@ -88,7 +88,7 @@ export default function Home() {
 
 			{/* Technologies */}
 
-			<h1 id="technologies" className="text-4xl font-bold mt-10 mb-10 w-[100vh] sm:w-full flex flex-col gap-6 text-center">
+			<h1 id="technologies" className="text-4xl font-bold mt-10 mb-10 w-[100vh] sm:w-full flex flex-col gap-6 text-center scroll-smooth">
 				{language && Translations[language].technologies.title}
 				<hr className="w-full relative border border-gray-200" />
 			</h1>
@@ -97,7 +97,7 @@ export default function Home() {
 				{language && Translations[language].technologies.body}
 			</p>
 
-			<h3 id="programming-languages" className="text-xl font-semibold mt-4 mb-4 w-[100vh] sm:w-full flex flex-col gap-6 text-left">
+			<h3 id="programming-languages" className="text-xl font-semibold mt-4 mb-4 w-[100vh] sm:w-full flex flex-col gap-6 text-left scroll-smooth">
 				{language && Translations[language].technologies.s1.title}
 				<hr className="w-full relative border border-gray-200" />
 			</h3>
@@ -123,7 +123,7 @@ export default function Home() {
 				/>
 			</div>
 
-			<h3 id="frameworks" className="text-xl font-semibold mt-4 mb-4 w-[100vh] sm:w-full flex flex-col gap-6 text-left">
+			<h3 id="frameworks" className="text-xl font-semibold mt-4 mb-4 w-[100vh] sm:w-full flex flex-col gap-6 text-left scroll-smooth">
 				Frameworks
 				<hr className="w-full relative border border-gray-200" />
 			</h3>
@@ -170,7 +170,7 @@ export default function Home() {
 
 			{/* Projects */}
 
-			<h1 id="projects" className="text-4xl font-bold mt-10 mb-10 w-[100vh] sm:w-full flex flex-col gap-6 text-center">
+			<h1 id="projects" className="text-4xl font-bold mt-10 mb-10 w-[100vh] sm:w-full flex flex-col gap-6 text-center scroll-smooth">
 				{language && Translations[language].projects.title}
 				<hr className="w-full relative border border-gray-200" />
 			</h1>
@@ -190,7 +190,7 @@ export default function Home() {
 
       	{/* Contact */}
 
-      	<h1 id="contact" className="text-4xl font-bold mt-10 mb-10 w-[100vh] sm:w-full flex flex-col gap-6 text-center">
+      	<h1 id="contact" className="text-4xl font-bold mt-10 mb-10 w-[100vh] sm:w-full flex flex-col gap-6 text-center scroll-smooth">
 				{language && Translations[language].contacts.title}
 				<hr className="w-full relative border border-gray-200" />
 			</h1>
