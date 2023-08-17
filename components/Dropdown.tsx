@@ -8,7 +8,7 @@ import arrow from "@/public/arrow.svg";
 
 interface Props {
   text: string | ReactNode;
-  items: Array<{ label: string, link: string, labelType?: string }>;
+  items: Array<{ label: string, link: string, labelType?: string | null }>;
 }
 
 const Dropdown: NextPage<Props> = (props) => {
@@ -63,7 +63,7 @@ const Dropdown: NextPage<Props> = (props) => {
               <a
                 key={index}
                 href={item.link}
-                onClick={item.labelType ? () => handleChangeLanguage(item.labelType) : () => {}}
+                onClick={item.labelType ? () => handleChangeLanguage(item.labelType) : undefined}
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 cursor-pointer"
                 role="menuitem"
               >

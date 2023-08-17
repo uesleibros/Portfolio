@@ -8,9 +8,9 @@ import Dropdown from "@/components/Dropdown";
 export default function Header() {
   const { language, changeLanguage } = useLanguageSwitcher();
 
-  let aboutItems: List<{ label: string, link?: string, labelType?: string }> = [];
-  let technologiesItems: List<{ label: string, link?: string, labelType?: string }> = [];
-  let languagesItems: List<{ label: string, link?: string, labelType?: string }> = [];
+  let aboutItems: List<{ label: string, link?: string, labelType?: string | null }> = [];
+  let technologiesItems: List<{ label: string, link?: string, labelType?: string | null }> = [];
+  let languagesItems: List<{ label: string, link?: string, labelType?: string | null }> = [];
 
   if (language) {
     aboutItems = [
