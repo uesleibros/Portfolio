@@ -8,9 +8,9 @@ import Dropdown from "@/components/Dropdown";
 export default function Header() {
   const { language, changeLanguage, updateLanguage } = useLanguageSwitcher();
 
-  let aboutItems = [];
-  let technologiesItems = [];
-  let languagesItems = [];
+  let aboutItems: any[] = [];
+  let technologiesItems: any[] = [];
+  let languagesItems: any[] = [];
 
   if (language) {
     aboutItems = [
