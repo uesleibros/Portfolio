@@ -22,7 +22,7 @@ const Dropdown: NextPage<Props> = (props) => {
   };
 
   useEffect(() => {
-    const handleOutsideClick = (event) => {
+    const handleOutsideClick = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         closeDropdown();
       }
