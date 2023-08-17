@@ -11,7 +11,7 @@ interface Props {
 const Dropdown: NextPage<Props> = (props) => {
   const { text, items } = props;
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
