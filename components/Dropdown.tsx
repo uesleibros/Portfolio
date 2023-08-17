@@ -17,16 +17,16 @@ const Dropdown: NextPage<Props> = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
-  function toggleDropdown(): void {
+  function toggleDropdown() {
     setIsOpen(!isOpen);
   };
 
-  function closeDropdown(): void {
+  function closeDropdown() {
     setIsOpen(false);
   };
 
   useEffect(() => {
-    function handleOutsideClick(event: MouseEvent): void {
+    function handleOutsideClick(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         closeDropdown();
       }
@@ -39,7 +39,7 @@ const Dropdown: NextPage<Props> = (props) => {
     };
   }, []);
 
-  function handleChangeLanguage(labelType: string): void {
+  function handleChangeLanguage(labelType: string) {
     if (labelType && labelType.startsWith("language-")) {
       changeLanguage(labelType);
     }
@@ -63,7 +63,7 @@ const Dropdown: NextPage<Props> = (props) => {
               <a
                 key={index}
                 href={item.link}
-                onClick={item.labelType ? () => handleChangeLanguage(item.labelType) : null}
+                onClick={item.labelType ? () => handleChangeLanguage(item.labelType) : () => {}}
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 cursor-pointer"
                 role="menuitem"
               >
