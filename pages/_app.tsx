@@ -1,8 +1,8 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
-import Header from "../components/Header";
-import "../styles/globals.css";
-import { inter, poppins } from "../fonts";
+import Header from "@/components/Header";
+import "@/styles/globals.css";
+import { inter, poppins } from "@/fonts";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
 	return (
@@ -20,7 +20,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 				<meta property="twitter:card" content="summary_large_image" />
 				<meta property="twitter:image" content="/logo.jpg" />
 
-				<link rel="icon" href="/logo.jpg" />
+				<link rel="icon" href="../logo.jpg" />
 				<title>Ueslei Paim's Portfolio</title>
 			</Head>
 			<Header />

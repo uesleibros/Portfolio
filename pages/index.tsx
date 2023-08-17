@@ -1,5 +1,5 @@
-import ProjectBox from "../components/ProjectBox";
-import Social from "../components/Social";
+import ProjectBox from "@/components/ProjectBox";
+import Social from "@/components/Social";
 import { Github, AtSign, Instagram, Linkedin } from "lucide-react";
 
 export default function Home() {
@@ -15,15 +15,21 @@ export default function Home() {
 		  url: "https://github.com/therealarfu/Periodic-Table-JSON",
 		  authors: ["Me", "TheRealArfu"] 
 		},
+		{
+			name: "Crate API", color: "bg-purple-300",
+			description: "An API of Crate Website from PPTGames.",
+			url: "https://github.com/uesleibros/CrateAPI",
+			authors: ["Me"]
+		}
 	];
 
 	return (
-		<div className="relative flex flex-col justify-center items-center p-4 sm:items-start gap-4">
+		<div className="relative flex flex-col justify-center items-center p-4 gap-4">
 			{/* About Me */}
 
 			<h1 id="about" className="text-4xl font-semibold mb-10">About Me</h1>
 			<p className="text-gray-600 max-w-prose">
-        		Hello! I'm Ueslei Paim, a passionate and experienced programmer with a keen interest in crafting elegant solutions to complex problems. With a solid foundation in computer science and a strong commitment to continuous learning, I thrive on creating efficient and effective software solutions.
+        		Hello! I'm Ueslei Paim, a passionate and experienced programmer with a keen interest in crafting elegant solutions to complex problems. With a solid fundamentals in computer science and a strong commitment to continuous learning, I thrive on creating efficient and effective software solutions.
 			</p>
 			<h3 className="text-lg font-semibold mt-4 mb-4">Technical Expertise</h3>
 			<p className="text-gray-600 max-w-prose">
