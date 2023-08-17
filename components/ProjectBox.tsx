@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NextPage } from "next";
+import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
+import Translations from "@/public/translations.json";
 
 interface Props {
   name: string;
@@ -10,6 +12,7 @@ interface Props {
 }
 
 const ProjectBox: NextPage<Props> = (props) => {
+  const { language, setLanguage } = useLanguageSwitcher();
   const { name, description, color, badge, url } = props;
 
   return (
@@ -24,7 +27,7 @@ const ProjectBox: NextPage<Props> = (props) => {
       <p className="text-gray-600 mb-2 max-w-sm">{ description }</p>
       {url && (
         <a href={url} className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
-          View on GitHub
+          {language && Translations[language].github}
         </a>
       )}
     </div>

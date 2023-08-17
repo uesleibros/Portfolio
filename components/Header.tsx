@@ -1,19 +1,50 @@
+import { useEffect, useState } from "react";
+import { Languages } from "lucide-react";
 import { poppins } from "@/fonts";
+import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
+import Translations from "@/public/translations.json";
 import Dropdown from "@/components/Dropdown";
 
 export default function Header() {
-  const aboutItems = [
-    { label: "About Me", link: "#about" },
-    { label: "Technical Expertise", link: "#technical-expertise" },
-    { label: "Problem Solver", link: "#problem-solver" },
-    { label: "Lifelong Learner", link: "#lifelong-learner" }
-  ];
+  const { language, changeLanguage } = useLanguageSwitcher();
 
-  const tecnologiesItems = [
-    { label: "Tecnologies", link: "#tecnologies" },
-    { label: "Programming Languages", link: "#programming-languages" },
-    { label: "Frameworks", link: "#frameworks" }
-  ];
+  let aboutItems: List<{ label: string, link?: string, labelType?: string }> = [];
+  let technologiesItems: List<{ label: string, link?: string, labelType?: string }> = [];
+  let languagesItems: List<{ label: string, link?: string, labelType?: string }> = [];
+
+  if (language) {
+    aboutItems = [
+        { label: Translations[language.toLowerCase()].about.title, link: "#about" },
+        { label: Translations[language.toLowerCase()].about.s1.title, link: "#technical-expertise" },
+        { label: Translations[language.toLowerCase()].about.s2.title, link: "#problem-solver" },
+        { label: Translations[language.toLowerCase()].about.s3.title, link: "#lifelong-learner" }
+      ];
+
+      technologiesItems = [
+        { label: Translations[language.toLowerCase()].technologies.title, link: "#technologies" },
+        { label: Translations[language.toLowerCase()].technologies.s1.title, link: "#programming-languages" },
+        { label: "Frameworks", link: "#frameworks" }
+      ];
+
+      languagesItems = [
+        { label: Translations.alts[language.toLowerCase()].portuguese, labelType: "language-Portuguese" },
+        { label: Translations.alts[language.toLowerCase()].english, labelType: "language-English"}
+      ];
+  }
+
+  function setupLanguage(): string {
+    let value: string;
+
+    if (!language) {
+      changeLanguage("language-Portuguese");
+    }
+
+    return language;
+  }
+
+  useEffect(() => {
+    changeLanguage(language ? language : setupLanguage());
+  }, []);
 
   return (
     <header className="bg-gray-50 py-4 mb-20 w-full">
@@ -21,18 +52,32 @@ export default function Header() {
         <h1 className={`text-xl text-blue-500 mb-5 select-none font-bold ${poppins.className}`}>Ueslei Paim</h1>
         <nav>
           <ul className="flex space-x-4 text-gray-400">
-            <li>
-              <span className="transition duration-300 hover:text-gray-600"><Dropdown text="About" items={ aboutItems } /></span>
-            </li>
-            <li>
-              <span className="transition duration-300 hover:text-gray-600"><Dropdown text="Tecnologies" items={ tecnologiesItems } /></span>
-            </li>
-            <li>
-              <a href="#projects" className="transition duration-300 hover:text-gray-600">Projects</a>
-            </li>
-            <li>
-              <a href="#contact" className="transition duration-300 hover:text-gray-600">Contact</a>
-            </li>
+            {language && (
+              <>
+                <li>
+                  <span className="transition duration-300 hover:text-gray-600">
+                    <Dropdown text={Translations[language.toLowerCase()].about.title} items={ aboutItems } />
+                  </span>
+                </li>
+                <li>
+                  <span className="transition duration-300 hover:text-gray-600">
+                    <Dropdown text={Translations[language.toLowerCase()].technologies.title} items={ technologiesItems } />
+                  </span>
+                </li>
+                <li>
+                  <a href="#projects" className="transition duration-300 hover:text-gray-600">{Translations[language.toLowerCase()].projects.title}</a>
+                </li>
+                <li>
+                  <a href="#contact" className="transition duration-300 hover:text-gray-600">{Translations[language.toLowerCase()].contacts.title}</a>
+                </li>
+                <li className="px-6">
+                  <span>
+                    <Dropdown text=<Languages /> items={ languagesItems } />
+                    <small className="text-xs">({ Translations.alts[language.toLowerCase()][language.toLowerCase()] })</small>
+                  </span>
+                </li>
+              </>
+            )}
           </ul>
         </nav>
       </div>

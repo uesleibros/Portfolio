@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import sadFace from "@/public/sad-face.svg";
 
-export default function Custom404() {
+export default function NotFound() {
 	const router = useRouter();
-	const [currentRoute, setCurrentRoute] = useState("");
+	const [currentRoute, setCurrentRoute] = useState<string>("");
 
 	useEffect(() => {
 		setCurrentRoute(router.asPath);

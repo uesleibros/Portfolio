@@ -1,8 +1,11 @@
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { Github, AtSign, Instagram, Linkedin } from "lucide-react";
+
+import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
 import ProjectBox from "@/components/ProjectBox";
 import Social from "@/components/Social";
-import Image from "next/image";
-import { useState } from "react";
-import { Github, AtSign, Instagram, Linkedin } from "lucide-react";
+import Translations from "@/public/translations.json";
 import JSLogo from "@/public/languages/js.png";
 import TSLogo from "@/public/languages/ts.png";
 import PythonLogo from "@/public/languages/python.png";
@@ -14,6 +17,8 @@ import FlaskLogo from "@/public/frameworks/flask.png";
 import FastAPILogo from "@/public/frameworks/fastapi.png";
 
 export default function Home() {
+	const { language, changeLanguage } = useLanguageSwitcher();
+
 	const projects = [
 		{ name: "Better Array", color: "bg-pink-400", 
 		  description: "BetterArray is a C++ library that provides a more convenient and efficient way to work with arrays.", 
@@ -32,66 +37,68 @@ export default function Home() {
 	];
 
 	return (
-		<div className="relative flex flex-col justify-center items-center p-4 gap-4 ">
-		
+		<div className={`relative flex flex-col justify-center items-center p-4 gap-4 ${language ? "visible" : "hidden"}`}>
+
 			{/* About Me */}
 
 			<h1 id="about" className="text-4xl font-bold mb-10 w-[100vh] sm:w-full flex flex-col gap-6 text-center">
-				About Me
+				{language && Translations[language].about.title}
 				<hr className="w-full relative border border-gray-200" />
 			</h1>
 
 			<p className="text-gray-600 max-w-prose">
-        		Hello! I'm Ueslei Paim, a passionate and experienced programmer with a keen interest in crafting elegant solutions to complex problems. With a solid fundamentals in computer science and a strong commitment to continuous learning, I thrive on creating efficient and effective software solutions.
+        		{language && Translations[language].about.body}
 			</p>
 
 			<h3 id="technical-expertise" className="text-xl font-semibold mt-4 mb-4 w-[100vh] sm:w-full flex flex-col gap-6 text-left">
-				Technical Expertise
+				{language && Translations[language].about.s1.title}
 				<hr className="w-full relative border border-gray-200" />
 			</h3>
 
 			<p className="text-gray-600 max-w-prose">
-			  My journey in programming began several years ago, and since then, I've honed my skills in various technologies and programming languages. I have extensive experience in:
+			  {language && Translations[language].about.s1.body.text}
 			</p>
 
 			<ul className="list-disc text-gray-600 max-w-prose">
-			  <li><strong>Web Development</strong>: Building responsive and user-friendly websites using HTML, CSS, and JavaScript. Working great in frontend frameworks like React and Vue.js.</li>
-			  <li><strong>Backend Development</strong>: Crafting robust and scalable APIs and server-side applications using technologies such as Node.js and Express, Python and Flask (or FastAPI).</li>
-			  <li><strong>Database Management</strong>: Designing, implementing, and optimizing databases using SQL and NoSQL databases like MySQL, MongoDB and Supabase.</li>
-			  <li><strong>Version Control</strong>: Git and collaborative development using platforms like GitHub and GitLab.</li>
+				{language &&
+					Translations[language].about.s1.body.list.map((item, index) => (
+					<li key={index}>
+						<strong>{item.title}:</strong> {item.body}
+					</li>
+				))}
 			</ul>
 
 			<h3 id="problem-solver" className="text-xl font-semibold mt-4 mb-4 w-[100vh] sm:w-full flex flex-col gap-6 text-left">
-				Problem Solver
+				{language && Translations[language].about.s2.title}
 				<hr className="w-full relative border border-gray-200" />
 			</h3>
 
 			<p className="text-gray-600 max-w-prose">
-			  I approach coding as a creative challenge, always seeking innovative solutions to complex problems. My analytical mindset and attention to detail allow me to break down intricate issues and develop effective strategies to overcome them. I thrive in collaborative environments and value open communication and teamwork.
+			  {language && Translations[language].about.s2.body.text}
 			</p>
 
 			<h3 id="lifelong-learner" className="text-xl font-semibold mt-4 mb-4 w-[100vh] sm:w-full flex flex-col gap-6 text-left">
-				Lifelong Learner
+				{language && Translations[language].about.s3.title}
 				<hr className="w-full relative border border-gray-200" />
 			</h3>
 
 			<p className="text-gray-600 max-w-prose">
-			  The world of technology is constantly evolving, and I am committed to staying up-to-date with the latest trends and advancements. I'm enthusiastic about embracing new languages, frameworks, and tools, allowing me to provide cutting-edge solutions to modern challenges.
+			  {language && Translations[language].about.s3.body.text}
 			</p>
 
-			{/* Tecnologies */}
+			{/* Technologies */}
 
-			<h1 id="tecnologies" className="text-4xl font-bold mt-10 mb-10 w-[100vh] sm:w-full flex flex-col gap-6 text-center">
-				Tecnologies
+			<h1 id="technologies" className="text-4xl font-bold mt-10 mb-10 w-[100vh] sm:w-full flex flex-col gap-6 text-center">
+				{language && Translations[language].technologies.title}
 				<hr className="w-full relative border border-gray-200" />
 			</h1>
 
 			<p className="text-gray-600 max-w-prose">
-				Welcome to the "Technologies" section of my portfolio, where I delve into the arsenal of languages, frameworks, and integrated development environments (IDEs) that form the cornerstone of my professional journey. Through this collection of tools, I've been able to craft solutions that merge creativity and functionality seamlessly.
+				{language && Translations[language].technologies.body}
 			</p>
 
 			<h3 id="programming-languages" className="text-xl font-semibold mt-4 mb-4 w-[100vh] sm:w-full flex flex-col gap-6 text-left">
-				Programming Languages
+				{language && Translations[language].technologies.s1.title}
 				<hr className="w-full relative border border-gray-200" />
 			</h3>
 
@@ -99,19 +106,19 @@ export default function Home() {
 				<Social
 					name="JavaScript"
 					url="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
-					tip="Programming Language"
+					tip={language && Translations[language].technologies.s1.alt}
 					icon=<Image src={ JSLogo } alt="" height={35} quality={100} />
 				/>
 				<Social
 					name="TypeScript"
 					url="https://www.typescriptlang.org/"
-					tip="Programming Language"
+					tip={language && Translations[language].technologies.s1.alt}
 					icon=<Image src={ TSLogo } alt="" height={35} quality={100} />
 				/>
 				<Social
 					name="Python"
 					url="https://www.python.org/"
-					tip="Programming Language"
+					tip={language && Translations[language].technologies.s1.alt}
 					icon=<Image src={ PythonLogo } alt="" height={35} quality={100} />
 				/>
 			</div>
@@ -164,7 +171,7 @@ export default function Home() {
 			{/* Projects */}
 
 			<h1 id="projects" className="text-4xl font-bold mt-10 mb-10 w-[100vh] sm:w-full flex flex-col gap-6 text-center">
-				Projects
+				{language && Translations[language].projects.title}
 				<hr className="w-full relative border border-gray-200" />
 			</h1>
 
@@ -184,7 +191,7 @@ export default function Home() {
       	{/* Contact */}
 
       	<h1 id="contact" className="text-4xl font-bold mt-10 mb-10 w-[100vh] sm:w-full flex flex-col gap-6 text-center">
-				Contact
+				{language && Translations[language].contacts.title}
 				<hr className="w-full relative border border-gray-200" />
 			</h1>
 
