@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import NextPage from "next";
+import { NextPage } from "next";
 import Image from "next/image";
 import arrow from "@/public/arrow.svg";
 
