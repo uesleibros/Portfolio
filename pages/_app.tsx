@@ -20,7 +20,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 				<meta property="twitter:card" content="summary_large_image" />
 				<meta property="twitter:image" content="/logo.jpg" />
 
-				<link rel="icon" href="../logo.jpg" />
+				<link rel="icon" href="../logo.jpg" sizes="any" />
 				<title>Ueslei Paim's Portfolio</title>
 			</Head>
 			<Header />
