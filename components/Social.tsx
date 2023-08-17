@@ -1,11 +1,12 @@
 import { NextPage } from "next";
+import { ReactNode } from "react";
 import Link from "next/link";
 
 interface Props {
 	name: string;
 	url?: string;
 	tip?: string;
-	icon: object;
+	icon: ReactNode;
 }
 
 const Social: NextPage<Props> = (props) => {
