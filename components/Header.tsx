@@ -12,9 +12,9 @@ export default function Header() {
 
   console.log(Translations)  
 
-  let aboutItems: Array<{ label: string, link?: string, labelType?: string | null }> = [];
-  let technologiesItems: Array<{ label: string, link?: string, labelType?: string | null }> = [];
-  let languagesItems: Array<{ label: string, link?: string, labelType?: string | null }> = [];
+  let aboutItems: Array<{ label: string | null | any, link?: string, labelType?: string | null }> = [];
+  let technologiesItems: Array<{ label: string | null | any, link?: string, labelType?: string | null }> = [];
+  let languagesItems: Array<{ label: string | null | any, link?: string, labelType?: string | null }> = [];
 
   if (language) {
     aboutItems = [
