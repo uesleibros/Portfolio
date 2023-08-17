@@ -1,4 +1,4 @@
-interface Translations {
+export default interface Translations {
   alts: {
     portuguese: {
       english: string;

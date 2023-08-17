@@ -3,7 +3,7 @@ import { Languages } from "lucide-react";
 import { poppins } from "@/fonts";
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
 import translations from "@/public/translations.json";
-import Translations from "@/types/translationsTypes.ts";
+import Translations from "@/types/translationsTypes";
 import Dropdown from "@/components/Dropdown";
 
 export default function Header() {
