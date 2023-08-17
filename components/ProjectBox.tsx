@@ -26,17 +26,17 @@ const ProjectBox: NextPage<Props> = (props) => {
     <div className="bg-white rounded-lg shadow-md p-4 border border-gray-200" style={{ minHeight: "180px" }} onMouseOver={handleShowAuthors} onMouseOut={handleHideAuthors}>
       <div className="flex items-center mb-2">
         <div className={`w-4 h-4 ${color ? color : "bg-gray-400"} rounded-full mr-2`}></div>
-        <h2 className="text-lg font-semibold">{name}</h2>
+        <h2 className="text-lg font-semibold">{ name }</h2>
         {badge && (
           <span className={`inline-block ml-2 px-2 py-1 text-xs rounded select-none ${color ? color : "bg-gray-400"} text-white`}>{ badge }</span>
         )}
       </div>
-      <p className="text-gray-600 mb-2 max-w-sm">{description}</p>
+      <p className="text-gray-600 mb-2 max-w-sm">{ description }</p>
       <div className="flex items-center text-sm text-gray-400">
       </div>
       {authors.length >= 1 && showAuthors && (
         <div className="mt-2 text-gray-600">
-          Author(s): <strong>{authors.join(", ")}</strong>
+          Author(s): <strong>{ authors.join(", ") }</strong>
         </div>
       )}
       {url && (

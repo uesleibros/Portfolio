@@ -1,4 +1,6 @@
 import ProjectBox from "../components/ProjectBox";
+import Social from "../components/Social";
+import { Github, AtSign, Instagram, Linkedin } from "lucide-react";
 
 export default function Home() {
 	const projects = [
@@ -15,11 +17,10 @@ export default function Home() {
 		},
 	];
 
-	function Alertar(){
-		alert("oi");
-	}
 	return (
 		<div className="relative flex flex-col justify-center items-center p-4 sm:items-start gap-4">
+			{/* About Me */}
+
 			<h1 id="about" className="text-4xl font-semibold mb-10">About Me</h1>
 			<p className="text-gray-600 max-w-prose">
         		Hello! I'm Ueslei Paim, a passionate and experienced programmer with a keen interest in crafting elegant solutions to complex problems. With a solid foundation in computer science and a strong commitment to continuous learning, I thrive on creating efficient and effective software solutions.
@@ -43,13 +44,14 @@ export default function Home() {
 			  The world of technology is constantly evolving, and I am committed to staying up-to-date with the latest trends and advancements. I'm enthusiastic about embracing new languages, frameworks, and tools, allowing me to provide cutting-edge solutions to modern challenges.
 			</p>
 
-			<h1 id="projects" className="text-4xl font-semibold mt-10 mb-10">Projects</h1>
+			{/* Projects */}
 
-			<div className="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 sm:grid-cols-1 gap-12 justify-center items-center">
+			<h1 id="projects" className="text-4xl font-semibold mt-10 mb-10">Projects</h1>
+			<div className="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 sm:grid-cols-1 sm:w-full gap-12 justify-center items-center">
 				{projects.map((project, index) => (
 					<ProjectBox
 						key={index}
-						name={project.name}
+						name={ project.name }
 						color={project.color}
 						description={project.description}
 						badge={project.badge}
@@ -57,6 +59,36 @@ export default function Home() {
 						authors={project.authors}
 		      	/>
 	      	))}
+      	</div>
+
+      	{/* Contact */}
+
+      	<h1 id="contact" className="text-4xl font-semibold mt-10 mb-10">Contact</h1>
+      	<div className="relative grid grid-cols-3 sm:grid-cols-1 sm:w-full gap-12 justify-center items-center">
+      		<Social
+      			name="Github"
+      			url="https://github.com/uesleibros"
+      			tip="github.com/uesleibros"
+      			icon=<Github size={30} />
+      		/>
+      		<Social
+      			name="Instagram"
+      			url="https://www.instagram.com/uesleou"
+      			tip="@uesleou"
+      			icon=<Instagram size={30} />
+      		/>
+      		<Social
+      			name="LinkedIn"
+      			url="https://www.linkedin.com/in/ueslei-paim-190b09287"
+      			tip="Ueslei Paim"
+      			icon=<Linkedin size={30} />
+      		/>
+      		<Social
+      			name="Email"
+      			url="https://uesleibros@gmail.com"
+      			tip="uesleibros@gmail.com"
+      			icon=<AtSign size={30} />
+      		/>
       	</div>
 		</div>
 	);
