@@ -13,17 +13,17 @@ const Dropdown: NextPage<Props> = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
-  const toggleDropdown = () => {
+  function toggleDropdown() {
     setIsOpen(!isOpen);
   };
 
-  const closeDropdown = () => {
+  function closeDropdown() {
     setIsOpen(false);
   };
 
   useEffect(() => {
-    const handleOutsideClick = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    function handleOutsideClick(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         closeDropdown();
       }
     };
