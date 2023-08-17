@@ -14,21 +14,21 @@ export default function Header() {
 
   if (language) {
     aboutItems = [
-        { label: Translations[language.toLowerCase()].about.title as string, link: "#about" },
-        { label: Translations[language.toLowerCase()].about.s1.title as string, link: "#technical-expertise" },
-        { label: Translations[language.toLowerCase()].about.s2.title as string, link: "#problem-solver" },
-        { label: Translations[language.toLowerCase()].about.s3.title as string, link: "#lifelong-learner" }
+        { label: (Translations[language.toLowerCase()].about.title as string), link: "#about" },
+        { label: (Translations[language.toLowerCase()].about.s1.title as string), link: "#technical-expertise" },
+        { label: (Translations[language.toLowerCase()].about.s2.title as string), link: "#problem-solver" },
+        { label: (Translations[language.toLowerCase()].about.s3.title as string), link: "#lifelong-learner" }
       ];
 
       technologiesItems = [
-        { label: Translations[language.toLowerCase()].technologies.title as string, link: "#technologies" },
-        { label: Translations[language.toLowerCase()].technologies.s1.title as string, link: "#programming-languages" },
+        { label: (Translations[language.toLowerCase()].technologies.title as string), link: "#technologies" },
+        { label: (Translations[language.toLowerCase()].technologies.s1.title as string), link: "#programming-languages" },
         { label: "Frameworks", link: "#frameworks" }
       ];
 
       languagesItems = [
-        { label: Translations.alts[language.toLowerCase()].portuguese as string, labelType: "language-Portuguese" },
-        { label: Translations.alts[language.toLowerCase()].english as string, labelType: "language-English"}
+        { label: (Translations.alts[language.toLowerCase()].portuguese as string), labelType: "language-Portuguese" },
+        { label: (Translations.alts[language.toLowerCase()].english as string), labelType: "language-English"}
       ];
   }
 
