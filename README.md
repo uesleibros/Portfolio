@@ -1,5 +1,3 @@
-<img src="/public/logo.jpg" height=30 />
-
 # Portfolio
 
 A personal website built in Next.js 13 using TypeScript language. 
