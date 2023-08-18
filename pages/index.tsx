@@ -124,7 +124,7 @@ export default function Home() {
 			</div>
 
 			<h3 id="frameworks" className="text-xl font-semibold mt-4 mb-4 w-[100vh] sm:w-full flex flex-col gap-6 text-left scroll-smooth">
-				Frameworks & {language && Translations[language].libarie}s
+				Frameworks & {language && Translations[language].library}s
 				<hr className="w-full relative border border-gray-200" />
 			</h3>
 
@@ -132,7 +132,7 @@ export default function Home() {
 				<Social
 					name="React.js"
 					url="https://react.dev/"
-					tip={language && Translations[language].librarie}
+					tip={language && Translations[language].library}
 					icon=<Image src={ ReactLogo } alt="" height={35} quality={100} />
 				/>
 				<Social
