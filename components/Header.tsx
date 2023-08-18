@@ -48,7 +48,7 @@ export default function Header() {
       <div className="container flex flex-col justify-between items-center p-2">
         <h1 className={`text-xl text-blue-500 mb-5 select-none font-bold ${poppins.className}`}>Ueslei Paim</h1>
         <nav>
-          <ul className="flex relative sm:grid sm:grid-cols-2 sm:gap-4 items-center w-full space-x-4 sm:space-x-0 text-gray-400">
+          <ul className="flex sm:text-2xl sm:flex-col sm:gap-6 items-center w-full space-x-4 sm:space-x-0 text-gray-400">
             {language && (
               <>
                 <li>
