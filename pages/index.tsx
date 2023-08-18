@@ -118,21 +118,21 @@ export default function Home() {
 				<Social
 					name="Python"
 					url="https://www.python.org/"
-					tip={language && Translations[language].technologies.s1.alt}
+					tip={language && Translations[language].technologies.s1.alt} {language == "portuguese" ? "(Padrão)" : "(Default)"}
 					icon=<Image src={ PythonLogo } alt="" height={35} quality={100} />
 				/>
 			</div>
 
 			<h3 id="frameworks" className="text-xl font-semibold mt-4 mb-4 w-[100vh] sm:w-full flex flex-col gap-6 text-left scroll-smooth">
-				Frameworks
+				Frameworks & {language == "portuguese" ? "Bibliotecas" : "Libraries"}
 				<hr className="w-full relative border border-gray-200" />
 			</h3>
 
 			<div className="relative grid grid-cols-3 sm:grid-cols-2 sm:w-full gap-12 justify-center items-center">
 				<Social
 					name="React.js"
-					url="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
-					tip="Framework"
+					url="https://react.dev/"
+					tip={language == "portuguese" ? "Biblioteca" : "Librarie"}
 					icon=<Image src={ ReactLogo } alt="" height={35} quality={100} />
 				/>
 				<Social
@@ -156,13 +156,13 @@ export default function Home() {
 				<Social
 					name="Flask"
 					url="https://flask.palletsprojects.com/"
-					tip="Application"
+					tip={language == "portuguese" ? "Aplicação" : "Application"}
 					icon=<Image src={ FlaskLogo } alt="" height={35} quality={100} />
 				/>
 				<Social
 					name="FastAPI"
-					url="https://flask.palletsprojects.com/"
-					tip="Application"
+					url="https://fastapi.tiangolo.com/"
+					tip={language == "portuguese" ? "Aplicação" : "Application"}
 					icon=<Image src={ FastAPILogo } alt="" height={35} quality={100} />
 				/>
 			</div>
