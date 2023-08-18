@@ -8,7 +8,7 @@ import arrow from "@/public/arrow.svg";
 
 interface Props {
   text: string | ReactNode;
-  items: Array<{ label: any, link: string, labelType?: string | null }>;
+  items: Array<{ label: any, link?: string, labelType?: string }>;
 }
 
 const Dropdown: NextPage<Props> = (props) => {

@@ -1,4 +1,4 @@
-const Translations = {
+const Data = {
 	"alts": {
 		"portuguese": {
 			"english": "Inglês",
@@ -125,4 +125,6 @@ const Translations = {
 	}
 };
 
+
+const Translations = Data as Record<string, any>;
 export default Translations;

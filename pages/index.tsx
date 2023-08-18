@@ -61,7 +61,7 @@ export default function Home() {
 
 			<ul className="list-disc text-gray-600 max-w-prose">
 				{language &&
-					Translations[language].about.s1.body.list.map((item, index) => (
+					Translations[language].about.s1.body.list.map((item: { title: string; body: string }, index: number) => (
 					<li key={index}>
 						<strong>{item.title}:</strong> {item.body}
 					</li>

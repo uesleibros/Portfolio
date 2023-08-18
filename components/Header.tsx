@@ -3,34 +3,32 @@ import { Languages } from "lucide-react";
 import { poppins } from "@/fonts";
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
 import Translations from "@/data/translations";
-import TranslationsType from "@/types/translationsType";
 import Dropdown from "@/components/Dropdown";
 
 export default function Header() {
   const { language, changeLanguage, updateLanguage } = useLanguageSwitcher();
 
-  let aboutItems: any[] = [];
-  let technologiesItems: any[] = [];
-  let languagesItems: any[] = [];
+  let aboutItems: { label: string; link?: string; labelType?: string }[] = [];
+  let technologiesItems: { label: string; link?: string; labelType?: string }[] = [];
+  let languagesItems: { label: string; link?: string; labelType?: string }[] = [];
 
   if (language) {
-    const TranslationsInterface: TranslationsType = Translations;
     aboutItems = [
-      { label: TranslationsInterface[language.toLowerCase()].about.title as string, link: "#about" },
-      { label: TranslationsInterface[language.toLowerCase()].about.s1.title as string, link: "#technical-expertise" },
-      { label: TranslationsInterface[language.toLowerCase()].about.s2.title as string, link: "#problem-solver" },
-      { label: TranslationsInterface[language.toLowerCase()].about.s3.title as string, link: "#lifelong-learner" }
+      { label: Translations[language.toLowerCase()].about.title as string, link: "#about" },
+      { label: Translations[language.toLowerCase()].about.s1.title as string, link: "#technical-expertise" },
+      { label: Translations[language.toLowerCase()].about.s2.title as string, link: "#problem-solver" },
+      { label: Translations[language.toLowerCase()].about.s3.title as string, link: "#lifelong-learner" }
     ];
 
     technologiesItems = [
-      { label: TranslationsInterface[language.toLowerCase()].technologies.title as string, link: "#technologies" },
-      { label: TranslationsInterface[language.toLowerCase()].technologies.s1.title as string, link: "#programming-languages" },
+      { label: Translations[language.toLowerCase()].technologies.title as string, link: "#technologies" },
+      { label: Translations[language.toLowerCase()].technologies.s1.title as string, link: "#programming-languages" },
       { label: "Frameworks", link: "#frameworks" }
     ];
 
     languagesItems = [
-      { label: TranslationsInterface.alts[language.toLowerCase()].portuguese as string, labelType: "language-Portuguese" },
-      { label: TranslationsInterface.alts[language.toLowerCase()].english as string, labelType: "language-English" }
+      { label: Translations.alts[language.toLowerCase()].portuguese as string, labelType: "language-Portuguese" },
+      { label: Translations.alts[language.toLowerCase()].english as string, labelType: "language-English" }
     ];
   }
 

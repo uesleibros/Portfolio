@@ -12,7 +12,7 @@ interface Props {
 }
 
 const ProjectBox: NextPage<Props> = (props) => {
-  const { language, setLanguage } = useLanguageSwitcher();
+  const { language } = useLanguageSwitcher();
   const { name, description, color, badge, url } = props;
 
   return (
