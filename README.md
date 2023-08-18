@@ -1,4 +1,10 @@
-# Getting Started
+<img src="/public/logo.jpg" height=150 />
+
+# Portfolio
+
+A personal website built in Next.js 13 using TypeScript language. 
+
+## Getting Started
 
 To start working with this project, follow the steps below:
 
