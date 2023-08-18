@@ -118,7 +118,7 @@ export default function Home() {
 				<Social
 					name="Python"
 					url="https://www.python.org/"
-					tip=`${language && Translations[language].technologies.s1.alt} (${language && Translations[language].default})`
+					tip={`${language && Translations[language].technologies.s1.alt} (${language && Translations[language].default})`}
 					icon=<Image src={ PythonLogo } alt="" height={35} quality={100} />
 				/>
 			</div>
