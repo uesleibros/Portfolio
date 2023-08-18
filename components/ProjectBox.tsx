@@ -16,7 +16,7 @@ const ProjectBox: NextPage<Props> = (props) => {
   const { name, description, color, badge, url } = props;
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 border border-gray-200" style={{ minHeight: "190px" }}>
+    <div className="bg-white rounded-lg shadow-md p-4 border border-gray-200 transition duration-300 ease-in-out hover:-translate-y-2 hover:bg-zinc-100" style={{ minHeight: "190px" }}>
       <div className="flex items-center mb-2">
         <div className={`w-4 h-4 ${color ? color : "bg-gray-400"} rounded-full mr-2`}></div>
         <h2 className="text-lg font-semibold">{ name }</h2>
