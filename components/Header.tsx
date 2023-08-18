@@ -27,8 +27,10 @@ export default function Header() {
     ];
 
     languagesItems = [
-      { label: Translations.alts[language.toLowerCase()].portuguese as string, labelType: "language-Portuguese" },
-      { label: Translations.alts[language.toLowerCase()].english as string, labelType: "language-English" }
+      { label: "Português (pt-BR)", labelType: "language-Portuguese" },
+      { label: "English (en-US)", labelType: "language-English" },
+      { label: "Español (es-ES)", labelType: "language-Spanish" },
+      { label: "日本語 (ja-JAP)", labelType: "language-Nihongo" }
     ];
   }
 
@@ -45,7 +47,7 @@ export default function Header() {
 
   return (
     <header className="bg-gray-50 py-4 mb-20 w-full">
-      <div className="container flex flex-col justify-between items-center p-2">
+      <div className="flex flex-col justify-between items-center p-2">
         <h1 className={`text-xl text-blue-500 mb-5 select-none font-bold ${poppins.className}`}>Ueslei Paim</h1>
         <nav>
           <ul className="flex sm:text-1xl sm:text-center sm:flex-col sm:gap-6 items-center w-full space-x-4 sm:space-x-0 text-gray-400">
@@ -70,7 +72,7 @@ export default function Header() {
                 <li className="px-6">
                   <span>
                     <Dropdown text=<Languages /> items={ languagesItems } />
-                    <small className="text-xs">({ Translations.alts[language.toLowerCase()][language.toLowerCase()] })</small>
+                    <small className="text-xs">({ Translations.langs[language.toLowerCase()] })</small>
                   </span>
                 </li>
               </>

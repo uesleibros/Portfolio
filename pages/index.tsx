@@ -25,7 +25,7 @@ export default function Home() {
 		  url: "https://github.com/uesleibros/BetterArray"
 		},
 		{ name: "Periodic Table JSON", color: "bg-blue-400", 
-		  description: "An JSON file of the Periodic Table.", 
+		  description: "A JSON file of the Periodic Table.", 
 		  badge: "Contributor",
 		  url: "https://github.com/therealarfu/Periodic-Table-JSON"
 		},
