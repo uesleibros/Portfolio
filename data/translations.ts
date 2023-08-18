@@ -10,6 +10,9 @@ const Data = {
 		}
 	},
 	"portuguese": {
+		"library": "Biblioteca",
+		"app": "Aplicação",
+		"default": "Padrão",
 		"about": {
 			"title": "Sobre Mim",
 			"body": "Olá! Eu sou Ueslei Paim, um programador apaixonado e experiente com um interesse especial em criar soluções elegantes para problemas complexos. Com uma base sólida em ciência da computação e um forte compromisso com a aprendizagem contínua, eu prospero ao criar soluções de software eficientes e eficazes.",
@@ -67,6 +70,9 @@ const Data = {
 		}
 	},
 	"english": {
+		"library": "Library",
+		"app": "Application",
+		"default": "Default",
 		"about": {
 			"title": "About Me",
 			"body": "Hello! I'm Ueslei Paim, a passionate and experienced programmer with a keen interest in crafting elegant solutions to complex problems. With a solid fundamentals in computer science and a strong commitment to continuous learning, I thrive on creating efficient and effective software solutions.",
