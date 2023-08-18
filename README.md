@@ -1,4 +1,4 @@
-<img src="/public/logo.jpg" height=150 />
+<img src="/public/logo.jpg" height=30 />
 
 # Portfolio
 
